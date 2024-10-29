@@ -446,4 +446,13 @@ footer a {
   .blu2 {
     top: 14vh;
   }
+  aside > div {
+    position: relative;
+  }
+  div > a + p > i {
+    position: absolute;
+    color: #96949496;
+    right: 3vh;
+    top: 3vh;
+  }
 }
