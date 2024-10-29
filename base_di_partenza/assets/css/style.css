@@ -131,13 +131,21 @@ h1 {
 }
 h1 span {
   position: relative;
+  display: inline-block;
 }
-h1 > span::after {
+span > img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  width: 100%;
+}
+/*h1 > span::after {
   content: url(../img/underline.svg);
   position: absolute;
-  right: 9vh;
+  right: 0;
   bottom: -5vh;
-}
+}*/
 p,
 address,
 ul,
@@ -326,7 +334,17 @@ aside div {
   margin-bottom: 1em;
   padding: 1em;
 }
-
+aside > div {
+  position: relative;
+}
+div > a + p > i {
+  position: absolute;
+  color: #96949496;
+  right: 3vh;
+  top: 3vh;
+  font-size: 3.5rem;
+  opacity: 0.8;
+}
 @media screen and (min-width: 1200px) {
   aside div {
     display: inline-block;
@@ -445,14 +463,5 @@ footer a {
   }
   .blu2 {
     top: 14vh;
-  }
-  aside > div {
-    position: relative;
-  }
-  div > a + p > i {
-    position: absolute;
-    color: #96949496;
-    right: 3vh;
-    top: 3vh;
   }
 }
